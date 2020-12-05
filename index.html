@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;font-family:Arial;width:98%;height:100%}
+
+table, tr, td, th {
+    border: 1px solid black;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="header" style="width:98%;">
+	<table style="border-collapse: collapse; border: none;">
+		<colgroup>
+		<col width="35%" />
+		<col width="63%" />
+		</colgroup>
+		<tbody>
+		<tr style="border: none;">
+		<td style="border: none;">
+		<img src="https://drive.google.com/uc?id=10yVDrvDojg2T37HxSLs3HfeYsgykVqnW" alt="My photo" class="responsive" width="98%">
+		</td>
+		<td style="border: none;">
+
+		<h2>Dongryeol Lee</h2>
+		</br></br></br>
+			<a href="http://www.linkedin.com/in/dongryeol-lee-9035024">LinkedIn profile</a></br>
+			<a href="https://drive.google.com/uc?id=1QJ-a-R95PR-FDh8dWCsn3wPszNA0N7Xd">CV (in pdf)</a>
+		</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+	
+<div class="topnav" id="myTopnav" style="padding-left:16px">
+  <a href="#home" class="active" onclick="return false;">Home</a>
+  <a href="#phdthesis" onclick="return false;">Ph.D. Thesis</a>
+  <div class="dropdown">
+    <button class="dropbtn">Research Interests
+    </button>
+    <div class="dropdown-content">
+      <a href="#fmm" onclick="return false;">Fast Multipole Methods</a>
+      <a href="#nearest_neighbor" onclick="return false;">Nearest Neighbor Methods</a>
+      <a href="#clustering" onclick="return false;">Nonparametric Clustering</a>
+      <a href="#alg_analysis" onclick="return false;">Algorithm Analysis</a>
+      <a href="#applications" onclick="return false;">Algorithm Applications</a>
+    </div>
+  </div>
+  <a href="#cv" onclick="return false;">Curriculum Vitae</a>
+</div>
+
+<div id="content" style="width:auto;height:auto;">
+</div>
+
+<div id="home_content" style="display: none">
+<h2>Welcome!</h2>
+<p>I am a researcher with industrial experience in web search, ﬁnance,
+and industrial asset prognostics.</p>
+<p>I have received a Ph.D. in Computer Science and a M.S. in Mathematics
+from Georgia Tech. My doctoral work focuses on non-parametric statistics,
+optimization, numerical linear algebra, parallel computation, heterogeneous
+computing. I have authored and reviewed for conferences and journals in
+machine learning, computational physics, and others. </p>
+</div>
+
+<div id="phdthesis_content" style="display: none">
+<h2>Thesis and slides</h2>
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjLXh2ajIyelJEWk0">Ph.D. thesis</a>
+<p></p>
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjUHFtZFMzRC1yeVE">Summary</a>
+</div>
+
+<div id="cv_content" style="display: none">
+<p><b>Faraday Future Advanced Technology Center</b><br/>
+Research Scientist (July 2016~Present)<br/>
+
+<p><b>Yahoo Research</b><br/>
+Research Scientist (January 2015~July 2016)<br/>
+
+<p><b>General Electric Global Research Center</b><br/>
+Research Scientist (July 2012~January 2015)<br/>
+
+<p><b>Georgia Institute of Technology</b><br />
+Ph.D. in Computer Science (Fall 2005~Spring 2012).<br />
+M.S. in Mathematics (Spring 2011).<br />
+<br />
+
+<b>Carnegie Mellon University</b><br />
+B.S. in Computer Science (Spring 2005).<br />
+B.S. in Mathematical Sciences (Spring 2005).<br /></p>
+</div>
+
+<div id="fmm_content" style="display: none">
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img alt="FMM plot" src="https://drive.google.com/uc?id=0B0d4UxulP1wjbk9MSEJOUlFna3M" width="100%" />
+</td>
+<td>
+<p><b>Fast Kernel Summations<br />
+(open-source C++ implementation of the dual-tree fast Gauss transform is available (updated April 24, 2012) 
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjX3IwRjd6YTc4aHM">here</a></b><br />
+
+D. Lee, R. Vuduc, and A. G. Gray.  <br />
+<i>A Distributed Kernel Summation Framework for General-Dimension
+Machine Learning</i> <a href="https://drive.google.com/uc?id=0B0d4UxulP1wjSXJ2UEtBMmdTemM">
+(pdf) </a>
+.<br />
+
+In SIAM International Conference on Data Mining, 2012. <b>Best Paper Award (1 out of 363 submissions, 1 out of 99 accepted submissions)</b>.
+
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjWEJkc1JHTXdMQ1k">
+Poster </a>
+<br />
+
+Journal version in Statistical Analysis and Data Mining
+<br />
+<br />
+
+W. B. March, A. Ozakin, D. Lee, R. Riegel, and A. G. Gray.<br />
+<i>Multi-Tree Algorithms for Large-Scale Astrostatistics</i>.<br />
+
+In Advances in Machine Learning and Data Mining for Astronomy, Chapman and Hall/CRC Press, 2012.<br />
+<br />
+
+D. Lee, A. Ozakin, and A. G. Gray.<br />
+<i>Multibody Multipole Methods</i>. <a href="http://arxiv.org/abs/1105.2769">(arXiv)</a><br />
+
+To appear in Journal of Computational Physics, 2012.<br />
+<br />
+
+D. Lee, and A. G. Gray.<br />
+<i>Fast High-dimensional Kernel Summations Using the Monte Carlo
+Multipole Method</i>. <a href="https://drive.google.com/uc?id=0B0d4UxulP1wjaGQ1TWpCWm5ZQTg">(pdf)</a><br />
+
+In: Advances in Neural Information Processing
+Systems, 2008. 
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjSXV5TzJSOEh5MXc">
+Poster </a> <br />
+<br />
+
+D. Lee and A. G. Gray.<br />
+<i>Faster Gaussian Summation: Theory and Experiment</i>. <a href="https://drive.google.com/uc?id=0B0d4UxulP1wjaWctTWFfUWdfV3c">(pdf)</a> <br />
+
+In: Proceedings of the Twenty-Second Conference on Uncertainty in Artificial
+             Intelligence, 2006.<br />
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjQS0wYkdtLTc1STQ">The
+datasets used for the paper (due to popular request)</a><br />
+<br />
+
+D. Lee, A. G. Gray, and A. W. Moore<br />
+<i>Dual-Tree Fast Gauss Transforms</i>. <a href="https://drive.google.com/uc?id=0B0d4UxulP1wjNkVKRUJ2ZUk5TzA">(pdf)</a> 
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjWjJ4c2tRX21KNVE">(bibtex)</a><br />
+
+In: Advances
+in Neural Information Processing Systems, 2005.
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjN2U1WlB3clo4NnM">
+Poster </a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="nearest_neighbor_content" style="display: none">
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img alt="Rank approximate nearest neighbor" src="https://drive.google.com/uc?id=0B0d4UxulP1wjQWJKZnRyVktoN2s" width="100%" />
+</td>
+<td>
+<p><b>Fast Nearest Neighbor</b><br />
+P. Ram, D. Lee, and A. G. Gray.<br />
+<i>Nearest-Neighbor Search on a Time Budget via Max-Margin
+Trees.</i><br />
+
+To appear in SIAM International Conference on Data Mining, 2012.<br />
+<br />
+
+P. Ram, D. Lee, H. Ouyang, and A. G. Gray.<br />
+<i>Rank-Approximate Nearest Neighbor Search: Retaining Meaning and Speed in High Dimensions</i>. 
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjT25iNGV6MWlNTjQ">(pdf)</a><br />
+
+In: Advances
+in Neural Information Processing Systems, 2009.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="clustering_content" style="display: none">
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img alt="Mean shift" src="https://drive.google.com/uc?id=0B0d4UxulP1wjSVgzZm56VjVoa2s" width="100%" />
+</td>
+<td>
+<p><b>Fast Non-parametric Clustering</b><br />
+P. Wang, D. Lee, A. G. Gray, and J. M. Rehg.<br />
+<i>Fast Mean Shift with Accurate and Stable Convergence</i>.
+ <a href="https://drive.google.com/uc?id=0B0d4UxulP1wjR2NZaXdaZmtTRk0">(pdf)</a> <br />
+
+In: Proceedings of the Eleventh International
+Conference on Artificial Intelligence and Statistics, 2007.
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjSmlJVWEzSXpzQU0">
+Poster </a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="alg_analysis_content" style="display: none">
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img alt="Pruning for kernel summation" src="https://drive.google.com/uc?id=0B0d4UxulP1wjS1FXSHVKYXNCa3c" width="100%" />
+<img alt="Dual-tree using cover-tree" src="https://drive.google.com/uc?id=0B0d4UxulP1wjRFNzdk9qUERmTlU" width="100%" />
+</td>
+<td>
+<p>
+<b>Run-time analysis of N-body methods</b><br />
+
+P. Ram, D. Lee, W. B. March, and A. G. Gray<br />
+<i>Linear-time Algorithms for Pairwise Statistical Problems</i>. <a href="https://drive.google.com/uc?id=0B0d4UxulP1wjdWRZT0tlZVNtQjA">(pdf)</a><br />
+
+In: Advances in Neural Information Processing
+Systems, 2009.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="applications_content" style="display: none">
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img alt="GPRF classes" src="https://drive.google.com/uc?id=0B0d4UxulP1wjdXNkMGFxbnFkekE" width="100%" />
+<img alt="GPRF classification" src="https://drive.google.com/uc?id=0B0d4UxulP1wjS3plZmJScEV1TEE" width="100%" />
+</td>
+<td>
+<p>
+<b>Fast Algorithms for Applications</b><br />
+
+K. Kim, D. Lee, and I. Essa. <br />
+<i>Detecting Regions of Interest in Dynamic Scenes for Camera
+Motion.</i><a href="https://drive.google.com/uc?id=0B0d4UxulP1wjaE5SVVFlWExkcUE">(pdf)</a><br />
+
+To appear in IEEE Conference on Computer Vision and
+Pattern Recognition, 2012.<br />
+<br />
+
+K. Kim, D. Lee, and I. Essa. <br />
+<i>Gaussian Process Regression Flow for Analysis of Motion Trajectories</i>. 
+<a href="https://drive.google.com/uc?id=0B0d4UxulP1wjc285dkRLYnpPbTA">(pdf)</a>
+ <a href="http://www.cc.gatech.edu/cpl/projects/gprf/">(main project page)</a><br />
+
+In: Proceedings of IEEE International Conference on Computer Vision, 2011.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<script type="text/javascript">
+function change_active_tab(href_object) {
+	var links = document.getElementsByTagName('a');
+	for(var i = 0; i < links.length; i++) {
+		if(links[i].classList.contains("active")) {
+			links[i].className = links[i].className.replace(/\bactive\b/g, "");
+			arr = href_object.className.split(" ");
+		    if (arr.indexOf("active") < 0) {
+		    	href_object.className += " " + "active";
+		    	href_object.className = href_object.className.trim();
+		    }
+		}
+	}	
+}
+
+function switch_content(content_div_name) {
+	document.getElementById("content").innerHTML = document.getElementById(content_div_name).innerHTML;
+}
+
+window.onload = function() {
+	document.getElementById("content").innerHTML = document.getElementById("home_content").innerHTML;
+}
+
+window.onclick = function(e) {	
+	if(e.target.localName == "a") {
+		var sharp_pos = e.target.href.indexOf("#");
+		change_active_tab(e.target);
+		if(sharp_pos >= 0) {
+			switch_content(e.target.href.substring(sharp_pos + 1) + "_content");
+		}
+	}
+}
+</script>
+
+</body>
+</html>
